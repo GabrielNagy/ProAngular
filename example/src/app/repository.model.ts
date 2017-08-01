@@ -16,6 +16,10 @@ export class Model {
     return this.products;
   }
 
+  getProductCount(): number {
+    return this.getProducts().length;
+  }
+
   getProduct(id: number): Product {
     return this.products.find(p => this.locator(p, id));
   }
